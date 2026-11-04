@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Tahun Baru 2025!</title>
+    <title>Happy New Year 2025!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -312,8 +312,8 @@
     
     <div class="container">
         <header>
-            <h1><i class="fas fa-glass-cheers"></i> Selamat Tahun Baru</h1>
-            <h2>Menyambut Tahun 2026</h2>
+            <h1><i class="fas fa-glass-cheers"></i> Happy New Year</h1>
+            <h2>Welcoming the Year 2026</h2>
             <div class="year">2026</div>
         </header>
         
@@ -331,42 +331,42 @@
         </div>
         
         <div class="message">
-            <p>Di tahun 2026 ini, semoga dunia dipenuhi dengan kedamaian, kemakmuran, dan kebahagiaan untuk semua umat manusia.</p>
-            <p>Mari kita sambut tahun baru dengan harapan baru, semangat baru, dan tekad untuk menciptakan dunia yang lebih baik.</p>
-            <p>Selamat Tahun Baru 2026! Semoga tahun ini membawa keberuntungan dan kebahagiaan bagi kita semua.</p>
+            <p>In this year 2026, may the world be filled with peace, prosperity, and happiness for all humanity.</p>
+            <p>Let us welcome the new year with new hopes, new spirits, and determination to create a better world.</p>
+            <p>Happy New Year 2026! May this year bring luck and happiness to all of us.</p>
         </div>
         
         <div class="countdown">
             <div class="countdown-box">
                 <div class="countdown-value" id="days">00</div>
-                <div class="countdown-label">Hari</div>
+                <div class="countdown-label">Days</div>
             </div>
             <div class="countdown-box">
                 <div class="countdown-value" id="hours">00</div>
-                <div class="countdown-label">Jam</div>
+                <div class="countdown-label">Hours</div>
             </div>
             <div class="countdown-box">
                 <div class="countdown-value" id="minutes">00</div>
-                <div class="countdown-label">Menit</div>
+                <div class="countdown-label">Minutes</div>
             </div>
             <div class="countdown-box">
                 <div class="countdown-value" id="seconds">00</div>
-                <div class="countdown-label">Detik</div>
+                <div class="countdown-label">Seconds</div>
             </div>
         </div>
         
         <div class="controls">
             <button class="fireworks-btn" id="toggleFireworks">
-                <i class="fas fa-fire"></i> Kontrol Bunga Api
+                <i class="fas fa-fire"></i> Control Fireworks
             </button>
             <button class="music-btn" id="toggleMusic">
-                <i class="fas fa-music"></i> Musik Tahun Baru
+                <i class="fas fa-music"></i> New Year Music
             </button>
         </div>
         
         <footer>
-            <p>Dibuat dengan <i class="fas fa-heart" style="color:#ff4757;"></i> untuk menyambut Tahun Baru 2026</p>
-            <p style="margin-top:10px; font-size:0.9rem;">© 2026 - Semoga tahun ini penuh berkah dan kebahagiaan</p>
+            <p>Made with <i class="fas fa-heart" style="color:#ff4757;"></i> to celebrate New Year 2026</p>
+            <p style="margin-top:10px; font-size:0.9rem;">© 2026 - May this year be full of blessings and happiness</p>
         </footer>
     </div>
     
@@ -375,26 +375,26 @@
     </audio>
     
     <script>
-        // Membuat efek bintang di latar belakang
+        // Create starry background
         function createStars() {
             const body = document.querySelector('body');
             for (let i = 0; i < 150; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star');
                 
-                // Ukuran acak
+                // Random size
                 const size = Math.random() * 3;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
                 
-                // Posisi acak
+                // Random position
                 star.style.left = `${Math.random() * 100}vw`;
                 star.style.top = `${Math.random() * 100}vh`;
                 
-                // Kecerahan acak
+                // Random brightness
                 star.style.opacity = Math.random() * 0.7 + 0.3;
                 
-                // Animasi berkedip
+                // Twinkling animation
                 const duration = Math.random() * 5 + 3;
                 star.style.animation = `pulse ${duration}s infinite alternate`;
                 
@@ -402,7 +402,7 @@
             }
         }
         
-        // Efek bunga api
+        // Fireworks effect
         class Firework {
             constructor(canvas, x, y) {
                 this.canvas = canvas;
@@ -453,10 +453,10 @@
                     p.y += p.velocity.y;
                     p.life--;
                     
-                    // Graviti
+                    // Gravity
                     p.velocity.y += 0.05;
                     
-                    // Hambatan udara
+                    // Air resistance
                     p.velocity.x *= 0.99;
                     p.velocity.y *= 0.99;
                     
@@ -481,7 +481,7 @@
             }
         }
         
-        // Sistem bunga api
+        // Fireworks system
         class FireworksSystem {
             constructor(container) {
                 this.container = container;
@@ -514,7 +514,7 @@
                     this.lastFirework = now;
                 }
                 
-                // Update dan gambar bunga api
+                // Update and draw fireworks
                 for (let i = this.fireworks.length - 1; i >= 0; i--) {
                     const firework = this.fireworks[i];
                     const alive = firework.update();
@@ -544,12 +544,12 @@
             }
         }
         
-        // Countdown ke Tahun Baru 2026
+        // Countdown to New Year 2026
         function updateCountdown() {
             const now = new Date();
             const newYear = new Date(now.getFullYear() + 1, 0, 1);
             
-            // Jika sudah lewat Tahun Baru 2025, hitung untuk 2026
+            // If we've passed New Year 2025, countdown to 2026
             if (now.getFullYear() >= 2025 && now.getMonth() >= 0 && now.getDate() >= 1) {
                 newYear.setFullYear(2026);
             }
@@ -567,49 +567,49 @@
             document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
         }
         
-        // Inisialisasi ketika halaman dimuat
+        // Initialize when page loads
         document.addEventListener('DOMContentLoaded', () => {
-            // Buat bintang
+            // Create stars
             createStars();
             
-            // Inisialisasi sistem bunga api
+            // Initialize fireworks system
             const fireworksContainer = document.getElementById('fireworks');
             const fireworksSystem = new FireworksSystem(fireworksContainer);
             
-            // Inisialisasi countdown
+            // Initialize countdown
             updateCountdown();
             setInterval(updateCountdown, 1000);
             
-            // Kontrol bunga api
+            // Fireworks control
             const toggleFireworksBtn = document.getElementById('toggleFireworks');
             toggleFireworksBtn.addEventListener('click', () => {
                 const isActive = fireworksSystem.toggle();
                 toggleFireworksBtn.innerHTML = isActive 
-                    ? '<i class="fas fa-fire"></i> Matikan Bunga Api' 
-                    : '<i class="fas fa-fire"></i> Nyalakan Bunga Api';
+                    ? '<i class="fas fa-fire"></i> Turn Off Fireworks' 
+                    : '<i class="fas fa-fire"></i> Turn On Fireworks';
             });
             
-            // Kontrol musik
+            // Music control
             const audio = document.getElementById('newYearAudio');
             const toggleMusicBtn = document.getElementById('toggleMusic');
             
             toggleMusicBtn.addEventListener('click', () => {
                 if (audio.paused) {
                     audio.play();
-                    toggleMusicBtn.innerHTML = '<i class="fas fa-volume-up"></i> Matikan Musik';
+                    toggleMusicBtn.innerHTML = '<i class="fas fa-volume-up"></i> Turn Off Music';
                 } else {
                     audio.pause();
-                    toggleMusicBtn.innerHTML = '<i class="fas fa-music"></i> Musik Tahun Baru';
+                    toggleMusicBtn.innerHTML = '<i class="fas fa-music"></i> New Year Music';
                 }
             });
             
-            // Tambahkan efek klik untuk membuat bunga api
+            // Add click effect to create fireworks
             fireworksContainer.addEventListener('click', (e) => {
                 const rect = fireworksContainer.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
                 
-                // Buat bunga api di posisi klik
+                // Create fireworks at click position
                 for (let i = 0; i < 3; i++) {
                     setTimeout(() => {
                         fireworksSystem.fireworks.push(new Firework(fireworksSystem.canvas, x, y));
@@ -617,9 +617,9 @@
                 }
             });
             
-            // Tampilkan pesan selamat tahun baru
+            // Show New Year greeting
             setTimeout(() => {
-                alert("Selamat Tahun Baru 2026! Semoga tahun ini membawa kebahagiaan dan kesuksesan untuk Anda!");
+                alert("Happy New Year 2026! May this year bring you joy and success!");
             }, 1000);
         });
     </script>
